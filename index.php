@@ -1,5 +1,14 @@
 <?php
 require('./Character.php');
+
+unset($_SESSION['fight_logs']);
+session_abort();
+session_destroy();
+
+session_start();
+$_SESSION['my_hp'] = 100;
+$_SESSION['enemy_hp'] = 100;
+
 $str = file_get_contents('characters.json');
 $characters = json_decode($str, true);
 
@@ -34,13 +43,17 @@ include('./templates/header.php')
         if($character -> getType() == 'good'){
     ?>
     <div class="character-container">
-        <a href="./battle.php?id=<?= $character -> getId()?>">
-            <img src="./img/characters/<?=$character -> getId()?>.jpg" alt="Photo du personnage <?= $character -> getName()?>" class="img-home">
+         <form method="post" action="battle.php" class="form-home">
+            <input type="hidden" name="selected_character_id" value="<?= $character-> getId() ?>">
+            <button type="submit" class="btn-home">
+                <img src="./img/characters/<?= $character -> getId() ?>.jpg" alt="<?= $character -> getName() ?>" class="img-home">
                 <p class="power-paragraph good-power">
-                    <img src="./img/jedisaber.svg" alt="" srcset="" class="img-svg">
+                    <img src="./img/sithsaber.svg" alt="" srcset="" class="img-svg">
                     <?= $character -> getPower()?>
                 </p>
-            </a>
+
+            </button>
+        </form>
     </div>
     <?php
         }
@@ -49,14 +62,16 @@ include('./templates/header.php')
         if($character -> getType() == 'bad'){
     ?>
     <div class="character-container">
-    <a href="./battle.php?id=<?= $character -> getId()?>">
-        <img src="./img/characters/<?=$character -> getId()?>.jpg" alt="Photo du personnage <?= $character -> getName()?>" class="img-home">
-        <p class="power-paragraph bad-power">
-            <img src="./img/sithsaber.svg" alt="" srcset="" class="img-svg">
-            <?= $character -> getPower()?>
-        </p>
-        </a>
-
+         <form method="post" action="battle.php" class="form-home">
+            <input type="hidden" name="selected_character_id" value="<?= $character-> getId() ?>">
+            <button type="submit" class="btn-home">
+                <img src="./img/characters/<?= $character -> getId() ?>.jpg" alt="<?= $character -> getName() ?>" class="img-home">
+                <p class="power-paragraph bad-power">
+                    <img src="./img/sithsaber.svg" alt="" srcset="" class="img-svg">
+                    <?= $character -> getPower()?>
+                </p>
+            </button>
+        </form>
     </div>
     <?php
         }
