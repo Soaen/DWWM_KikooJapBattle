@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Naofumi",
+        "puissance": 76,
+        "attacks" : [
+            {
+                "name": "Coup de bouclier",
+                "damage": 25
+            }
+        ],
+        "type": "good"
+    },
+    {
+        "id": 2,
+        "name": "Raphtalia",
+        "puissance": 94,
+        "attacks" : [
+            {
+                "name": "Coup d'épée",
+                "damage": 25
+            },
+            {
+                "name": "Etranglement",
+                "damage": 10
+            }
+        ],
+        "type": "good"
+    },
+    {
+        "id": 3,
+        "name": "Akame",
+        "puissance": 96,
+        "attacks" : [
+            {
+                "name": "Coup de Sabre",
+                "damage": 25
+            },
+            {
+                "name": "Saignement",
+                "damage": 50
+            }
+        ],
+        "type": "bad"
+    },
+    {
+        "id": 4,
+        "name": "Rin Okumura",
+        "puissance": 82,
+        "attacks" : [
+            {
+                "name": "Coup de sabre",
+                "damage": 25
+            },
+            {
+                "name": "Flame Satanique",
+                "damage": 50
+            }
+        ],
+        "type": "bad"
+    },
+    {
+        "id": 5,
+        "name": "Kufa Vampir",
+        "puissance": 88,
+        "attacks" : [
+            {
+                "name": "Coup de Sabre",
+                "damage": 25
+            },
+            {
+                "name": "Croc Vampirique",
+                "damage": 40
+            }
+        ],
+        "type": "good"
+    },
+    {
+        "id": 6,
+        "name": "Melida Angel",
+        "puissance": 91,
+        "attacks" : [
+            {
+                "name": "Coup de Sabre",
+                "damage": 25
+            }
+        ],
+        "type": "good"
+    },
+    {
+        "id": 7,
+        "name": "David Martinez",
+        "puissance": 72,
+        "attacks": [
+            {
+                "name": "Coup de poing",
+                "damage": 25
+            },
+            {
+                "name": "Coup de feu",
+                "damage": 5
+            }
+        ],
+        "type": "bad"
+    },
+    {
+        "id": 8,
+        "name": "Lucy",
+        "puissance": 95,
+        "attacks": [
+            {
+                "name": "Étranglement",
+                "damage": 25
+            },
+            {
+                "name": "Découpe filaire",
+                "damage": 45
+            }
+        ],
+        "type": "bad"
+    }
+]
